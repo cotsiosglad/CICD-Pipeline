@@ -3,15 +3,12 @@ name: CICD Pipeline
 on: [push]
   
 jobs:
-
   Test:
     runs-on: ubuntu-latest
-   
     steps:
      - name: Run the script
      - uses: actions/checkout@v2
      - run: python hello.py
-
   Build:
     needs: [Test]
     runs-on: ubuntu-latest
